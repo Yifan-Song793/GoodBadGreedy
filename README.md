@@ -12,7 +12,7 @@ Our study addresses this issue by exploring key questions about the performance 
 
 Here are our findings:
 - A notable performance gap is observed between **greedy decoding** and **sampling generation**.
-- Greedy decoding outperforms sampling on most evaluated benchmarks, except for AlpacaEval.
+- **Greedy decoding outperforms sampling** on most evaluated benchmarks, except for AlpacaEval.
 - Math reasoning and code generation were most impacted by sampling variance.
 - The above findings remain consistent across different sizes and families of LLMs.
 - Alignment methods, e.g., DPO, can significantly reduce the sampling variance for most benchmarks.
@@ -37,7 +37,7 @@ There are two parts in this project: LLM non-determinism analysis, best-of-N exp
 1. Download LLM samples from Huggingface.
 2. `pip install -r requirements.txt`
 
-## 🚀 LLM Non-Determinism Analysis
+## 📊 LLM Non-Determinism Analysis
 
 We evaluate non-determinism generation of LLMs on seven benchmarks: [AlpacaEval 2](https://github.com/tatsu-lab/alpaca_eval), [Arena-Hard](https://github.com/lm-sys/arena-hard-auto), [WildBench v2](https://github.com/allenai/WildBench), [MixEval](https://github.com/Psycoy/MixEval), [MMLU-Redux](http://arxiv.org/abs/2406.04127), [GSM8K](https://arxiv.org/abs/2110.14168), and [HumanEval](https://arxiv.org/abs/2107.03374).
 
@@ -56,6 +56,13 @@ Take AlpacaEval for example, you can analyse the 16 sampled generations:
 bash scripts/eval_alpacaeval_sample_baseline.sh <DATA_PATH>/alpaca_eval
 ```
 
+<p align="center">
+<img src=assets/main.png width=800/>
+</p>
+
+From the results, we observe a consistent performance gap between greedy decoding and the sampling method.
+Greedy decoding generally proves more effective for most tasks, except for AlpacaEval.
+
 ## 🚀 Best-of-N Evaluation
 
 First, employ off-the-shelf reward models to get the rewards for LLM generations. We have implement reward modeling code for [Starling-RM](https://huggingface.co/Nexusflow/Starling-RM-34B), [Eurus-RM](https://huggingface.co/openbmb/Eurus-RM-7b), [FsfairX](https://huggingface.co/sfairXC/FsfairX-LLaMA3-RM-v0.1), and [ArmoRM](https://huggingface.co/RLHFlow/ArmoRM-Llama3-8B-v0.1). Take AlpacaEval for example:
@@ -68,6 +75,13 @@ Then, evaluate in a best-of-N setting:
 ```bash
 bash scripts/eval_alpacaeval_sample_reward.sh <DATA_PATH>/alpaca_eval
 ```
+
+<p align="center">
+<img src=assets/reward.png width=800/>
+</p>
+
+With the oracle selection, even smaller LLMs like Llama-3-8B-Instruct can outperform GPT-4-Turbo on MMLU, GSM8K, and HumanEval.
+Furthermore, cutting-edge reward models can also select superior responses from multiple generations, and can outperform GPT-4-Turbo on GSM8K with only 8 samples.
 
 
 ## 📖 Citation
