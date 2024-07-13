@@ -7,8 +7,10 @@ Official repo for [The Good, The Bad, and The Greedy: Evaluation of LLMs Should 
 Authors: [Yifan Song](https://github.com/Yifan-Song793), Guoyin Wang, [Sujian Li](http://123.56.88.210/), [Bill Yuchen Lin](https://yuchenlin.xyz/).
 
 
+> **TLDR:** Are there performance gap between greedy decoding and sampling for LLMs? The answer is YES!
+
 Current evaluations of large language models (LLMs) often overlook non-determinism, typically focusing on a single output per example. This limits our understanding of LLM performance variability in real-world applications. 
-Our study addresses this issue by exploring key questions about the performance differences between greedy decoding and sampling, identifying benchmarks’ consistency regarding non-determinism, and examining unique model behaviors. 
+Our study addresses this issue by exploring key questions about the **performance differences between greedy decoding and sampling**, identifying benchmarks’ consistency regarding non-determinism, and examining unique model behaviors. 
 
 Here are our findings:
 - A notable performance gap is observed between **greedy decoding** and **sampling generation**.
