@@ -132,7 +132,9 @@ def main(args):
             output_res[idx]['rewards'][sample_idx] = reward
             output_res[idx]['best_sample'] = max(output_res[idx]['rewards'], key=output_res[idx]['rewards'].get)
             output_res[idx]['best_reward'] = max(output_res[idx]['rewards'].values())
-
+    
+    if not os.path.exists(args.output_path):
+        os.mkdir(args.output_path)
     if not os.path.exists(os.path.join(args.output_path, model)):
         os.mkdir(os.path.join(args.output_path, model))
     if not os.path.exists(os.path.join(args.output_path, model, "gsm")):

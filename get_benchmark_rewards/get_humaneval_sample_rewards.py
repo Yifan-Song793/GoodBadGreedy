@@ -92,7 +92,6 @@ def main(args):
     model = args.completion_model_name
     output_res = {}
     for sample_idx in range(args.sample_num):
-        # /ML-A800/home/yifan/code/open-instruct/results/codex_humaneval/Meta-Llama-3-8B-Instruct_nochat_sample_0
         with open(os.path.join(args.completion_path, f"{model}_nochat_sample_{sample_idx}", "codex_eval_predictions.jsonl_results.jsonl")) as fr:
             cur_raw_annotation = [json.loads(line) for line in fr]
         test_samples = []
@@ -134,6 +133,8 @@ def main(args):
             output_res[idx]['best_sample'] = max(output_res[idx]['rewards'], key=output_res[idx]['rewards'].get)
             output_res[idx]['best_reward'] = max(output_res[idx]['rewards'].values())
 
+    if not os.path.exists(args.output_path):
+        os.mkdir(args.output_path)
     if not os.path.exists(os.path.join(args.output_path, model)):
         os.mkdir(os.path.join(args.output_path, model))
     if not os.path.exists(os.path.join(args.output_path, model, "humaneval")):

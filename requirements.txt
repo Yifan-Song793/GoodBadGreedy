@@ -1,0 +1,7 @@
+alpaca_eval.egg==0.6.1
+flash-attn==2.5.8
+numpy==1.24.1
+pandas==2.2.2
+tiktoken==0.6.0
+torch==2.3.0+cu118
+transformers==4.41.0
