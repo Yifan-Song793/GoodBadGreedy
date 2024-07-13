@@ -1,6 +1,6 @@
 # Evaluation of LLMs Should Not Ignore Non-Determinism
 
-[**🤗 Dataset**](https://huggingface.co/datasets/) | [**📖 arXiv**](https://arxiv.org/)
+[**🤗 Dataset**](https://huggingface.co/datasets/goodbadgreedy/GoodBadGreedy) | [**📖 arXiv**](https://arxiv.org/)
 
 Official repo for [The Good, The Bad, and The Greedy: Evaluation of LLMs Should Not Ignore Non-Determinism](https://arxiv.org/)
 
@@ -34,7 +34,7 @@ There are two parts in this project: LLM non-determinism analysis, best-of-N exp
 
 ## 🛠️ Setup
 
-1. Download LLM samples from Huggingface.
+1. Download LLM samples from [Huggingface](https://huggingface.co/datasets/goodbadgreedy/GoodBadGreedy).
 2. `pip install -r requirements.txt`
 
 ## 📊 LLM Non-Determinism Analysis
@@ -89,7 +89,7 @@ Furthermore, cutting-edge reward models can also select superior responses from 
 If you find this repo helpful, please cite out paper:
 
 ```
-@article{song2024trial,
+@article{song2024good,
     author={Yifan Song and Guoyin Wang and Sujian Li and Bill Yuchen Lin},
     title={The Good, The Bad, and The Greedy: Evaluation of LLMs Should Not Ignore Non-Determinism},
     year={2024},
