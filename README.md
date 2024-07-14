@@ -10,7 +10,7 @@ Authors: [Yifan Song](https://github.com/Yifan-Song793), Guoyin Wang, [Sujian Li
 > **TLDR:** Are there performance differences between greedy decoding and sampling methods for LLM generation? The answer is YES!
 
 Current evaluations of large language models (LLMs) often overlook non-determinism, typically focusing on a single output per example. This limits our understanding of LLM performance variability in real-world applications. 
-Our study addresses this issue by exploring key questions about the **performance differences between greedy decoding and sampling**, identifying benchmarks’ consistency regarding non-determinism, and examining unique model behaviors. 
+Our study addresses this issue by exploring key questions about the **non-determinism of LLM generations**, identifying benchmarks’ consistency regarding non-determinism, and examining unique model behaviors. 
 
 Here are our findings:
 - A notable performance gap is observed between **greedy decoding** and **sampling generation**.
