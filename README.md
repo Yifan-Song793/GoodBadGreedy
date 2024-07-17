@@ -1,8 +1,8 @@
 # Evaluation of LLMs Should Not Ignore Non-Determinism
 
-[**🤗 Dataset**](https://huggingface.co/datasets/goodbadgreedy/GoodBadGreedy) | [**📖 arXiv**](https://arxiv.org/)
+[**🤗 Dataset**](https://huggingface.co/datasets/goodbadgreedy/GoodBadGreedy) | [**📖 arXiv**](https://arxiv.org/abs/2407.10457)
 
-Official repo for [The Good, The Bad, and The Greedy: Evaluation of LLMs Should Not Ignore Non-Determinism](https://arxiv.org/)
+Official repo for [The Good, The Bad, and The Greedy: Evaluation of LLMs Should Not Ignore Non-Determinism](https://arxiv.org/abs/2407.10457)
 
 Authors: [Yifan Song](https://github.com/Yifan-Song793), Guoyin Wang, [Sujian Li](http://123.56.88.210/), [Bill Yuchen Lin](https://yuchenlin.xyz/).
 
